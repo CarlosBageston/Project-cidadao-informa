@@ -1,14 +1,5 @@
 import styled from "styled-components";
 
-
-export const Container = styled.div`
-position: fixed;
-height: 100%;
-width: 100%;
-margin: -8px;
-background: linear-gradient(to bottom, #ffffff 0%, #ececec 50%, #c9c9c9 100%);
-`
-
 export const Image =  styled.img `
 margin-top: -10%;
 margin-left: -18%;

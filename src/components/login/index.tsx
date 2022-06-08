@@ -1,13 +1,13 @@
 import fundo from '../../imagens/Shapes.png'
 import logo from '../../imagens/logo-prefeitura.png'
 import { useNavigate } from 'react-router-dom';
-import { Container, Image, Svg, Svg2, Logo, Title, Box, Form, InputEmail, H1,Button, InputCheckBox,Label, A } from './style';
+import { Image, Svg, Svg2, Logo, Title, Box, Form, InputEmail, H1,Button, InputCheckBox,Label, A } from './style';
 
 function Login() {
   let navigate = useNavigate();
 
     return (
-      <Container>
+      <>
           <div className="backgroung">
             <Image src={fundo} alt="imagem" width={800} />
 
@@ -36,7 +36,7 @@ function Login() {
               <Button onClick={() => navigate('/Home') }>Login</Button>
             </Form>
           </Box>
-      </Container>
+      </>
     )
   }
   
