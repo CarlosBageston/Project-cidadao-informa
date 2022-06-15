@@ -40,8 +40,8 @@ display: inline-grid;
 margin-left: 95px;
 margin-top: -5px;
 `
-export const InputEmail = styled.input`
-margin-top: 10px;
+export const Input = styled.input`
+margin-top: 15px;
 border-top: none;
 border-left: none;
 border-right: none;
@@ -88,14 +88,19 @@ margin-top: 10px;
 margin-left: -35px;
 `
 export const Label = styled.label`
-margin-top: -18px;
+margin-top: -15px;
 margin-left: -18px;
 font-size: 14px;
 `
 export const A = styled.a `
 margin-left: 49%;
-margin-top: -19px;
+margin-top: -16px;
 text-decoration: none;
 color: black;
 font-size: 14px;
+`
+export const P = styled.p `
+margin-top: 25px;
+color: red;
+font-weight: bold;
 `

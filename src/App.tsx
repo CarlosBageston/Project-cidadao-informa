@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-      <Routesfunction/>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routesfunction/>
+      </BrowserRouter>
     <GlogalStyle/>
     </>
   )
