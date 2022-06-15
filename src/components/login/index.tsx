@@ -1,10 +1,32 @@
 import fundo from '../../imagens/Shapes.png'
 import logo from '../../imagens/logo-prefeitura.png'
 import { useNavigate } from 'react-router-dom';
-import { Image, Svg, Svg2, Logo, Title, Box, Form, InputEmail, H1,Button, InputCheckBox,Label, A } from './style';
+import { Image, Svg, Svg2, Logo, Title, Box, Form, Input, H1,Button, InputCheckBox,Label, A, P } from './style';
+import { signInWithEmailAndPassword, getAuth } from 'firebase/auth'
+import { useState } from 'react'
+
 
 function Login() {
   let navigate = useNavigate();
+  const auth = getAuth()
+  const [authenticating, setauthenticating] = useState<boolean>(false);
+  const [email, setemail] = useState('');
+  const [password, setpassword] = useState('')
+  const [ erro, seterro] = useState('')
+ 
+
+  const loginEmailSenha = async () => {
+    
+    setauthenticating(true)
+
+    signInWithEmailAndPassword(auth, email, password).then (() => {
+      navigate('/Home');
+    })
+    .catch(() => {
+      seterro ("E-mail ou senha incorreto")
+      setauthenticating(false)
+    })
+  }
 
     return (
       <>
@@ -27,18 +49,19 @@ function Login() {
           </div>
           <Box className="ScreenLogin">
             <H1>Bem vindo</H1>
-            <Form action="">
-              <InputEmail type="text" id="fEmail" name="fEmail" placeholder='Digite seu E-mail' color='#FFF' />
-              <InputEmail type="password" id="fSenha" name="fSenha" placeholder='Digite sua senha' />
-              <InputCheckBox type="checkbox" id='Fcheckbox' name='fchackbox'/>
+            <Form>
+              <Input onChange={(e) => setemail(e.target.value)} type="text" id="fEmail" name="fEmail" placeholder='Digite seu E-mail' color='#FFF'  />
+              <Input onChange={(e) => setpassword(e.target.value)} type="password" id="fSenha" name="fSenha" placeholder='Digite sua senha' />
+              
+              <InputCheckBox type="checkbox" />
               <Label htmlFor="chack">Lembre-me</Label>
               <A href="#">Esqueceu a senha?</A>
-              <Button onClick={() => navigate('/Home') }>Login</Button>
+              <P>{erro}</P>
+              <Button onClick={() => loginEmailSenha()} disabled={authenticating} >Login</Button>
             </Form>
           </Box>
       </>
     )
   }
-  
   export default Login
   
