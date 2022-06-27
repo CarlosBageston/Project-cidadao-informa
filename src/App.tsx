@@ -1,17 +1,16 @@
-import Routesfunction from "./Routes";
-import { BrowserRouter} from "react-router-dom";
-import GlogalStyle from "./StyleGlobal";
+import { BrowserRouter } from 'react-router-dom';
+import Routesfunction from './Routes';
+import GlogalStyle from './StyleGlobal';
 
 function App() {
-
-  return (
-    <>
-      <BrowserRouter>
-        <Routesfunction/>
-      </BrowserRouter>
-    <GlogalStyle/>
-    </>
-  )
+    return (
+        <>
+            <BrowserRouter>
+                <Routesfunction />
+            </BrowserRouter>
+            <GlogalStyle />
+        </>
+    );
 }
 
-export default App
+export default App;
