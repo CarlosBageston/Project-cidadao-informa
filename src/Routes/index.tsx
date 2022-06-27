@@ -1,11 +1,7 @@
-import Paths from "./paths"
+import Paths from './paths';
 
 function Routesfunction() {
-    return (
-        <>
-            <Paths/>
-        </>
-    )
-  }
-  
-  export default Routesfunction
+    return <Paths />;
+}
+
+export default Routesfunction;

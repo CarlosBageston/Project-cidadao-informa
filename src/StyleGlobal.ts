@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlogalStyle = createGlobalStyle`
 
@@ -12,5 +12,5 @@ const GlogalStyle = createGlobalStyle`
         height: 100vh;
         overflow: hidden;
     }
-`
-export default GlogalStyle
+`;
+export default GlogalStyle;
