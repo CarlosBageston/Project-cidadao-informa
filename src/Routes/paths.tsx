@@ -5,13 +5,20 @@ import AuthRoute from '../components/auth/authrouter';
 import ReportScreen from '../components/report screen';
 
 function Paths() {
-
-  return (
-    <Routes>
-        <Route path="/" element={ <Login/> }/>
-        <Route path="/Home" element={<AuthRoute> <Home/></AuthRoute>}/>
-    </Routes>
-  )
+    return (
+        <Routes>
+            <Route path="/" element={<Login />} />
+            <Route
+                path="/Home"
+                element={
+                    <AuthRoute>
+                        <Home />
+                    </AuthRoute>
+                }
+            />
+            <Route path="/ReportScreen" element={<ReportScreen />} />
+        </Routes>
+    );
 }
 
 export default Paths;
