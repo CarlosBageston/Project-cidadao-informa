@@ -4,20 +4,12 @@ import Home from '../components/Home';
 import AuthRoute from '../components/auth/authrouter';
 
 function Paths() {
-    return (
-        <Routes>
-            <Route path="/Home" element={<Home />} />
-            <Route
-                path="/"
-                element={
-                    <AuthRoute>
-                        {' '}
-                        <Login />
-                    </AuthRoute>
-                }
-            />
-        </Routes>
-    );
+  return (
+    <Routes>
+        <Route path="/" element={ <Login/> }/>
+        <Route path="/Home" element={<AuthRoute> <Home/></AuthRoute>}/>
+    </Routes>
+  )
 }
 
 export default Paths;
