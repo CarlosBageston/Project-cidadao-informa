@@ -1,12 +1,7 @@
-import Login from "../components/login/index"
-import Home from "../components/Home";
-import {Routes,Route } from "react-router-dom";
-import { initializeApp } from 'firebase/app'
-import { config } from '../config/config'
-import AuthRoute from "../components/auth/authrouter";
-
-initializeApp(config.firebaseConfig )
-
+import { Routes, Route } from 'react-router-dom';
+import Login from '../components/login/index';
+import Home from '../components/Home';
+import AuthRoute from '../components/auth/authrouter';
 
 function Paths() {
   return (
@@ -17,4 +12,4 @@ function Paths() {
   )
 }
 
-export default Paths
+export default Paths;
