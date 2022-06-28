@@ -11,8 +11,8 @@ initializeApp(config.firebaseConfig )
 function Paths() {
   return (
     <Routes>
-        <Route path="/" element={<AuthRoute> <Login/> </AuthRoute>}/>
-        <Route path="/Home" element={<Home/>}/>
+        <Route path="/" element={ <Login/> }/>
+        <Route path="/Home" element={<AuthRoute> <Home/></AuthRoute>}/>
     </Routes>
   )
 }
