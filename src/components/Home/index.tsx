@@ -1,11 +1,9 @@
-import { collection, getDocs } from 'firebase/firestore/lite';
-import { CollectionReference } from 'firebase/firestore';
-
+import { collection, getDocs, CollectionReference } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { Envelope, EnvelopeOpen } from 'phosphor-react';
 import { db } from '../../config/config';
 import Logo from '../../imagens/logo-prefeitura.png';
-import { Header, Image, Title, Svg, Svg2, H1, Contaner, A, Li, Ul } from './Styled';
+import { Header, Image, Title, Svg, Svg2, H1, Contaner, A, Li } from './Styled';
 
 export interface Relatorios {
     id: string | null;
@@ -26,7 +24,7 @@ function Home() {
             setRelatorio(data.docs.map(doc => ({ ...doc.data(), id: doc.id, isOpen: false })));
         };
         getRelatorio();
-    }, []);
+    }, [_collection]);
 
     const handleOnCLickOpenRelato = (id: string | null) => {
         setRelatorio(oldRelatos => {
@@ -40,7 +38,6 @@ function Home() {
             return newRelatos;
         });
     };
-
     return (
         <>
             <Header>
@@ -63,11 +60,11 @@ function Home() {
                 <H1>Pagina de recebimento de relatos</H1>
             </Header>
             <Contaner>
-                {Relatorio.map((Relato, id) => {
+                {Relatorio.map(Relato => {
                     return (
-                        <div>
+                        <div key={Relato.id}>
                             {Relato.isOpen ? (
-                                <A href="#">
+                                <A href="/ReportScreen">
                                     <Li>
                                         <EnvelopeOpen /> Novo Relatorio no bairro: {Relato.Bairro}
                                     </Li>
