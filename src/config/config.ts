@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore/lite';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 export const config = {
     firebaseConfig: {
@@ -12,6 +13,7 @@ export const config = {
         measurementId: 'G-LCV37H6TXK',
     },
 };
-initializeApp(config.firebaseConfig);
+const app = initializeApp(config.firebaseConfig);
 
 export const db = getFirestore();
+export const auth = getAuth(app);
