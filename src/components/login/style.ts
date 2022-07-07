@@ -85,7 +85,7 @@ export const Button = styled.button`
 `;
 export const InputCheckBox = styled.input`
     margin-top: 10px;
-    margin-left: -35px;
+    margin-left: -260px;
 `;
 export const Label = styled.label`
     margin-top: -15px;
@@ -93,7 +93,7 @@ export const Label = styled.label`
     font-size: 14px;
 `;
 export const A = styled.a`
-    margin-left: 49%;
+    margin-left: 40%;
     margin-top: -16px;
     text-decoration: none;
     color: black;

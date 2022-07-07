@@ -16,7 +16,14 @@ function Paths() {
                     </AuthRoute>
                 }
             />
-            <Route path="/ReportScreen" element={<ReportScreen />} />
+            <Route
+                path="/ReportScreen"
+                element={
+                    <AuthRoute>
+                        <ReportScreen />
+                    </AuthRoute>
+                }
+            />
         </Routes>
     );
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
+export const HeaderConteiner = styled.header`
     margin-top: -2px;
     position: relative;
     margin-top: -22px;
