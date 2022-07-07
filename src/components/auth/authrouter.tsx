@@ -18,7 +18,7 @@ function AuthRoute(props: IAuthRoutepagepros) {
                 if (user) {
                     setloading(false);
                 } else {
-                    navigate('/home');
+                    navigate('/');
                 }
             }),
         [auth, navigate],
