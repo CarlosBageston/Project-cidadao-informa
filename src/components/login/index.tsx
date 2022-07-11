@@ -74,7 +74,7 @@ function Login() {
 
                     <InputCheckBox type="checkbox" />
                     <Label htmlFor="chack">Lembre-me</Label>
-                    <A href="#">Esqueceu a senha?</A>
+                    <A href="/reset">Esqueceu a senha?</A>
                     <P>{erro}</P>
                     <Button onClick={() => loginEmailSenha()} disabled={authenticating}>
                         Login
