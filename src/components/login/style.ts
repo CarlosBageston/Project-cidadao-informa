@@ -1,23 +1,25 @@
 import styled from 'styled-components';
 
 export const Image = styled.img`
-    margin-top: -10%;
-    margin-left: -18%;
+    margin-top: -115px;
+    margin-left: -260px;
 `;
 export const Svg = styled.svg`
-    margin-left: 75%;
-    margin-top: -8%;
+    display: flex;
+    margin-left: 1300px;
+    margin-top: -60px;
 `;
 export const Svg2 = styled.svg`
     position: absolute;
-    margin-top: -32%;
-    margin-left: 83%;
+    margin-top: -500px;
+    margin-left: 1400px;
     transform: rotate(160deg);
 `;
 export const Logo = styled.img`
     position: absolute;
-    margin-top: -62%;
-    margin-left: 4%;
+    margin-top: -1090px;
+    margin-left: -40px;
+    width: 360px;
 `;
 export const Title = styled.h1`
     margin-top: -52%;
@@ -25,10 +27,13 @@ export const Title = styled.h1`
     color: #000;
 `;
 export const Box = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 350px;
     height: 350px;
-    margin-left: 40%;
-    margin-top: -2%;
+    margin-left: 700px;
+    margin-top: -800px;
     backdrop-filter: blur(16px) saturate(180%);
     border-radius: 54px;
     border: 1px solid rgba(255, 255, 255, 0.125);
@@ -36,9 +41,9 @@ export const Box = styled.div`
     box-shadow: 30px 30px 41px #54bcf330, -30px -30px 41px #8054fa3d;
 `;
 export const Form = styled.form`
-    display: inline-grid;
-    margin-left: 95px;
-    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
 `;
 export const Input = styled.input`
     margin-top: 15px;
@@ -56,8 +61,7 @@ export const Input = styled.input`
     }
 `;
 export const H1 = styled.h1`
-    margin-left: 23%;
-    margin-top: 13%;
+    margin-top: 45px;
     font-size: 38px;
     color: #e0dfdc;
     letter-spacing: 0.1em;
@@ -93,7 +97,7 @@ export const Label = styled.label`
     font-size: 14px;
 `;
 export const A = styled.a`
-    margin-left: 40%;
+    margin-left: 84px;
     margin-top: -16px;
     text-decoration: none;
     color: black;
