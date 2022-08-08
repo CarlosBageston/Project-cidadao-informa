@@ -1,42 +1,30 @@
 import styled from 'styled-components';
 
-export const Right = styled.section`
-    float: right;
-    border-left: 1px solid #666;
-    width: 400px;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    animation: report 2s linear;
-    display: none;
-    padding: 8px;
-    @keyframes report {
-        from {
-            margin-right: -28%;
-        }
-    }
-`;
-
-export const Button = styled.button`
-    margin-top: -98%;
-    width: 50%;
-    margin-left: 100px;
-    height: 32px;
-`;
 export const ButtonLeft = styled.button`
+    margin-inline: auto;
     width: 250px;
+    height: 44px;
+    border-radius: 40px;
+    border: none;
+    background: #1433ff;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
-    border: none;
-    margin-left: 15%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.8s;
+    }
 `;
 export const Input = styled.input`
-    margin-top: 25%;
-    height: 30%;
-    width: 91%;
-    margin-left: 12px;
+    margin-top: auto;
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
 `;
 export const Text = styled.p`
     font-size: 30px;
@@ -44,10 +32,15 @@ export const Text = styled.p`
     font-family: roboto;
 `;
 export const Left = styled.section`
-    display: inline-grid;
-    margin-left: 20%;
-    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
     width: 500px;
+    background-color: #d9d9d9;
+    margin-top: 24px;
+    margin-left: 28px;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 24px;
 `;
 export const Titles = styled.p`
     font-size: 24px;
@@ -60,4 +53,15 @@ export const Inicio = styled.a`
     &:hover {
         background: linear-gradient(to bottom, #7271d0 0%, #7d57c6 63%, #360383 100%);
     }
+`;
+export const Imagem = styled.img`
+    margin: auto;
+`;
+export const TextUser = styled.div`
+    margin-left: 10px;
+`;
+export const Container = styled.section`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 `;

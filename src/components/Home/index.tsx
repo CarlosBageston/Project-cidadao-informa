@@ -2,13 +2,13 @@ import { collection, getDocs, CollectionReference } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { Envelope, EnvelopeOpen } from 'phosphor-react';
 import { db } from '../../config/config';
-import { Contaner, A, Li } from './Styled';
+import { Contaner, A, Li, Paragraph, Div } from './Styled';
 import Header from '../header';
 
 export interface Relatorios {
     id: string | null;
     Bairro: string;
-    Descrição: string;
+    Descricao: string;
     Imagem: string;
     RuaAvenida: string;
     isOpen: boolean;
@@ -39,22 +39,24 @@ function Home() {
         });
     };
     return (
-        <>
+        <Div>
             <Header texto="Pagina de relatos recebidos" />
             <Contaner>
                 {Relatorio.map(Relato => {
                     return (
                         <div key={Relato.id}>
                             {Relato.isOpen ? (
-                                <A href="/ReportScreen">
+                                <A href={`/ReportScreen/${Relato.id}`}>
                                     <Li>
-                                        <EnvelopeOpen /> Novo Relatorio no bairro: {Relato.Bairro}
+                                        <EnvelopeOpen fontSize={35} />
+                                        <Paragraph>Novo Relatorio no bairro: {Relato.Bairro}</Paragraph>
                                     </Li>
                                 </A>
                             ) : (
                                 <A href="#" onClick={() => handleOnCLickOpenRelato(Relato.id)}>
                                     <Li>
-                                        <Envelope /> Novo Relatorio no bairro: {Relato.Bairro}
+                                        <Envelope fontSize={35} />
+                                        <Paragraph>Novo Relatorio no bairro: {Relato.Bairro}</Paragraph>
                                     </Li>
                                 </A>
                             )}
@@ -62,7 +64,7 @@ function Home() {
                     );
                 })}
             </Contaner>
-        </>
+        </Div>
     );
 }
 

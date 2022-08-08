@@ -18,7 +18,7 @@ function Paths() {
                 }
             />
             <Route
-                path="/ReportScreen"
+                path="/ReportScreen/:id"
                 element={
                     <AuthRoute>
                         <ReportScreen />

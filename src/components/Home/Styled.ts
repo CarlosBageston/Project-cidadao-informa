@@ -1,24 +1,19 @@
 import styled from 'styled-components';
 
 export const HeaderConteiner = styled.header`
-    margin-top: -2px;
-    position: relative;
-    margin-top: -22px;
+    display: flex;
     width: 100%;
     height: 150px;
-    background: linear-gradient(117deg, #7f52c4, #50c7f3);
+    background: linear-gradient(270deg, rgba(86, 191, 251, 0.9) 0%, rgba(87, 12, 146, 0.62) 100%);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    overflow: hidden;
 `;
 export const Image = styled.img`
-    margin-left: 10%;
-    margin-top: 20px;
+    margin-top: -15px;
 `;
 export const Title = styled.h1`
     color: #fff;
-    margin-left: 20%;
-    margin-top: -8%;
+    margin-top: 28px;
 `;
 export const Svg = styled.svg`
     position: absolute;
@@ -33,19 +28,14 @@ export const Svg2 = styled.svg`
     transform: rotate(93deg);
 `;
 export const H1 = styled.h1`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 100px;
+    margin-left: 150px;
     color: #fff;
 `;
 export const Contaner = styled.section`
-    width: 700px;
-    height: 82vh;
-    border: 1px solid black;
-    margin: auto;
-    margin-top: 5px;
-    overflow: auto;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 30px;
 `;
 export const Ul = styled.ul`
     list-style: none;
@@ -55,19 +45,23 @@ export const A = styled.a`
 `;
 export const Li = styled.li`
     display: flex;
-    align-items: center;
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 28px;
     padding-left: 18px;
-    color: #006699;
+    color: #000000;
     font-family: 'Roboto';
-    border: 1px solid #666;
-    padding: 8px;
-    width: 99%;
-    margin-left: 5px;
+    padding: 12px;
+    background-color: #d9d9d9;
     margin-top: 2px;
+    border-radius: 18px;
     &:hover {
         color: blue;
-        background-color: #f1f1f1;
+        background-color: #dedede;
     }
+`;
+export const Paragraph = styled.p`
+    margin-left: 16px;
+`;
+export const Div = styled.div`
+    overflow: auto;
 `;
