@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { useState } from 'react';
 import fundo from '../../imagens/Shapes.png';
-import logo from '../../imagens/Logo_CidadaoInforma2.png';
+import logo from '../../imagens/Logo_CidadaoInforma.png';
 import { Image, Svg, Svg2, Logo, Box, Form, Input, H1, Button, InputCheckBox, Label, A, P } from './style';
 
 function Login() {
@@ -48,7 +48,7 @@ function Login() {
 
             <Logo src={logo} alt="logo-prefeitura" width={200} />
             <Box>
-                <H1>Bem vindo</H1>
+                <H1>Bem-vindo</H1>
                 <Form>
                     <Input
                         onChange={e => setemail(e.target.value)}

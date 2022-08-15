@@ -21,53 +21,40 @@ function ReportScreen() {
         };
         getRelatorio();
     }, []);
-    // const handleOnCLickId = (id: string | null) => {
-    //     setItem(oldItem => {
-    //         const newItem = oldItem.map(itens => {
-    //             if (itens.id === id) {
-    //                 return { ...itens };
-    //             }
-    //             return itens;
-    //         });
-
-    //         return newItem;
-    //     });
-    // };
-
     if (!Item) {
         return <div>Nenhum conteudo encontrado</div>;
     }
 
     return (
         <div>
-            <Header texto="Pagina de relatos detalhados" />
+            <Header texto="Página de relatos detalhados" />
             <Container>
                 <Left>
                     <Titles>Endereço:</Titles>
                     <br />
                     <TextUser>
-                        <p key={Item.id}>Bairro: {Item.Bairro}</p>
+                        <p key={Item.id}>Bairro: {Item.bairro}</p>
                     </TextUser>
                     <br />
                     <TextUser>
-                        <p key={Item.id}>Rua/Avenida: {Item.RuaAvenida}</p>
+                        <p key={Item.id}>Rua/Avenida: {Item.rua}</p>
                     </TextUser>
                     <br />
                     <Titles>Descrição da situação atual:</Titles>
                     <br />
                     <TextUser>
-                        <p key={Item.id}>{Item.Descricao}</p>
+                        <p key={Item.id}>{Item.descricao}</p>
                     </TextUser>
                     <br />
                     <Titles>
                         Imagem da situação atual:
-                        <p key={Item.id}>{Item.Imagem}</p>
+                        <p key={Item.id}>{Item.imagem}</p>
                     </Titles>
                     <br />
                     <Imagem src={Buraco} alt="buraco" width={250} />
                 </Left>
                 <Left>
-                    <Text>Escreva aqui uma resposta para o usuario</Text>
+                    <Text>Escreva aqui uma resposta para o usuário</Text>
                     <Input type="text" />
                     <br />
                     <br />

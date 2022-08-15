@@ -6,18 +6,18 @@ export const Image = styled.img`
 `;
 export const Svg = styled.svg`
     display: flex;
-    margin-left: 1300px;
-    margin-top: -60px;
+    margin-left: 1500px;
+    margin-top: 15px;
 `;
 export const Svg2 = styled.svg`
     position: absolute;
-    margin-top: -500px;
-    margin-left: 1400px;
+    margin-top: -480px;
+    margin-left: 1609px;
     transform: rotate(160deg);
 `;
 export const Logo = styled.img`
     position: absolute;
-    margin-top: -1090px;
+    margin-top: -1195px;
     margin-left: -40px;
     width: 360px;
 `;

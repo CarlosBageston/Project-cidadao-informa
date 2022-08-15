@@ -25,10 +25,7 @@ function Paths() {
                     </AuthRoute>
                 }
             />
-            <Route
-              path="/Reset"
-              element={<ResetPasswordPage/>}
-            />
+            <Route path="/Reset" element={<ResetPasswordPage />} />
         </Routes>
     );
 }

@@ -1,5 +1,5 @@
 import { HeaderConteiner, Image, Title, Svg, Svg2, H1 } from '../Home/Styled';
-import Logo from '../../imagens/Logo_CidadaoInforma2.png';
+import Logo from '../../imagens/Logo_CidadaoInforma.png';
 
 export default function Header({ texto }: { texto: string }) {
     return (

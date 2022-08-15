@@ -43,7 +43,7 @@ export const Left = styled.section`
     border-radius: 24px;
 `;
 export const Titles = styled.p`
-    font-size: 24px;
+    font-size: 28px;
 `;
 export const Inicio = styled.a`
     margin-left: 20%;
@@ -59,6 +59,7 @@ export const Imagem = styled.img`
 `;
 export const TextUser = styled.div`
     margin-left: 10px;
+    font-size: 20px;
 `;
 export const Container = styled.section`
     display: flex;

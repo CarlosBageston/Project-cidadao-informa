@@ -7,10 +7,10 @@ import Header from '../header';
 
 export interface Relatorios {
     id: string | null;
-    Bairro: string;
-    Descricao: string;
-    Imagem: string;
-    RuaAvenida: string;
+    bairro: string;
+    descricao: string;
+    imagem: string;
+    rua: string;
     isOpen: boolean;
 }
 
@@ -40,7 +40,7 @@ function Home() {
     };
     return (
         <Div>
-            <Header texto="Pagina de relatos recebidos" />
+            <Header texto="Página de relatos recebidos" />
             <Contaner>
                 {Relatorio.map(Relato => {
                     return (
@@ -49,14 +49,14 @@ function Home() {
                                 <A href={`/ReportScreen/${Relato.id}`}>
                                     <Li>
                                         <EnvelopeOpen fontSize={35} />
-                                        <Paragraph>Novo Relatorio no bairro: {Relato.Bairro}</Paragraph>
+                                        <Paragraph>Novo Relatorio no bairro: {Relato.bairro}</Paragraph>
                                     </Li>
                                 </A>
                             ) : (
                                 <A href="#" onClick={() => handleOnCLickOpenRelato(Relato.id)}>
                                     <Li>
                                         <Envelope fontSize={35} />
-                                        <Paragraph>Novo Relatorio no bairro: {Relato.Bairro}</Paragraph>
+                                        <Paragraph>Novo Relatorio no bairro: {Relato.bairro}</Paragraph>
                                     </Li>
                                 </A>
                             )}
